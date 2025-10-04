@@ -1,0 +1,86 @@
+[user]
+	name = infirit89
+	email = georgedautov808@gmail.com
+	signingkey = ~/.ssh/github/infirit
+
+[core]
+	editor = nvim
+	whitespace = error
+	preloadindex = true
+
+# Aliases for easier use
+[alias]
+	conf = config --global --edit
+	cge = config --global --edit
+	st = status -s
+	sta = status
+	lag = log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n'
+# format:
+# %C -- specify color
+# %h -- commit hash
+# %an -- author name
+# %ar -- commit time
+# %D -- ref names
+# %n -- new line
+# %s -- commit message
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
+	template = ~/.config/git/template
+	verbose = true # add more context to commit messages
+
+[blame]
+    coloring = highlightRecent
+    date = relative
+
+[push]
+	recurseSubmodules = on-demand
+	autoSetupRemote = true
+	default = current
+	followTags = true
+
+[rebase]
+	missingCommitsCheck = warn  # warn if rebasing with missing commits
+
+[submodule]
+	recurse = true
+
+[status]
+	branch = true
+	showStash = true
+	showUntrackedFiles = all
+
+[log]
+	abbrevCommit = true
+	graphColors = blue,yellow,cyan,magenta,green,red
+
+# Colors
+[color "decorate"]
+	HEAD = red
+	branch = blue
+	tag = yellow
+	remoteBranch = magenta
+
+[color "diff"]
+    meta       = black bold
+    frag       = magenta
+    context    = white
+    whitespace = yellow reverse
+    old        = red
+
+[color "branch"]
+    current  = magenta
+    local    = default
+    remote   = yellow
+    upstream = green
+    plain    = blue
+
+# Url Shortcuts
+[url "git@github.com:"]
+	insteadOf = "gh:"
+
+[url "git@github.com:infirit89/"]
+	insteadOf = "inf:"
